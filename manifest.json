@@ -1,0 +1,28 @@
+{
+    // Comments are accepted in the manifest, even though it is JSON.
+    "manifest_version": 3,
+    "name": "zyplayer",
+    "description": "一键搜索全网视频资源，直接在线观看! ",
+    "version": "0.0.1",
+    "icons": {
+        "16": "logo/2.png",
+        "48": "logo/2.png",
+        "128": "logo/2.png"
+    },
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "一键搜索全网视频资源，直接在线观看!",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "content_scripts": [{
+        "js": ["foreground.js"],
+        "matches": ["https://github.com/*"]
+    }]
+}

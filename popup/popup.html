@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>全网视频</title>
+  <script src="../ext/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="../ext/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.css">
+  <script src="../ext/bootstrap-table.min.js"></script>
+
+  <link href="https://unpkg.com/jquery-resizable-columns@0.2.3/dist/jquery.resizableColumns.css" rel="stylesheet">
+  <script src="../ext/jquery.resizableColumns.min.js"></script>
+
+  <script src="../ext/bootstrap-table-mobile.min.js"></script>
+
+  <script src="../ext/bootstrap-table-resizable.min.js"></script>
+
+  <script src="../ext/axios.min.js"></script>
+  <script src="./popup.js"></script>
+  <style>
+    body {
+      background-color: #dce1e6;
+    }
+
+    a {
+      margin: 1px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin-top: 20px;" align="center">
+    <a href="./popup.html"  target='_blank' >🎬全网视频</a>
+  </div>
+
+  <div class="container" style="width: 90%;margin-top: 20px">
+    <form action="#">
+      <div class="input-group form-group">
+        <span class="input-group-addon btn btn-primary" id="switch_btn">🎬</span>
+        <input type="text" class="form-control" id="search_wd" placeholder="一键搜索全网影视资源站!" size="50">
+        <span class="input-group-addon btn btn-primary" id="search_btn">搜索</span>
+        <span class="input-group-addon btn btn-primary" id="search_next_btn">下一页</span>
+      </div>
+    </form>
+  </div>
+
+
+  <table id="table" class='table table-striped table-bordered table-hover table-dark table-borderless'
+    data-toggle="table" data-search="true" data-show-toggle='true' data-show-columns='true' data-pagination="true"
+    data-pagination-v-align="both" data-mobile-responsive="true">
+    <thead>
+      <tr>
+        <!--<th data-field="vod_id">ID</th>-->
+        <th data-field="vod_name" data-sortable="true">名称</th>
+        <th data-field="vod_pic" data-width="220px" data-formatter="picFormatter">图片</th>
+        <th data-field="vod_year" data-sortable="true">年代</th>
+        <th data-field="vod_area" data-sortable="true">地区</th>
+        <th data-field="vod_lang">语言</th>
+        <th data-field="vod_pubdate" data-sortable="true">发布时间</th>
+        <th data-field="vod_remarks" data-sortable="true">最近更新</th>
+        <th data-field="vod_time" data-sortable="true">更新时间</th>
+        <th data-field="vod_actor">演员</th>
+        <th data-field="vod_play_url">分集列表</th>
+        <th data-field="vod_content" data-width="440px">简介</th>
+      </tr>
+    </thead>
+  </table>
+</body>
+
+</html>
